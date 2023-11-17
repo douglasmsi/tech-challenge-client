@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tech-challenge-app
+  name: tech-challenge-client-app
   namespace: tech-challenge-namespace
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tech-challenge-app
+      app: tech-challenge-client-app
   template:
     metadata:
       labels:
-        app: tech-challenge-app
+        app: tech-challenge-client-app
     spec:
       containers:
         - name: app
@@ -58,7 +58,7 @@ metadata:
   namespace: tech-challenge-namespace
 spec:
   selector:
-    app: tech-challenge-app
+    app: tech-challenge-client-app
   ports:
     - protocol: TCP
       port: 80
