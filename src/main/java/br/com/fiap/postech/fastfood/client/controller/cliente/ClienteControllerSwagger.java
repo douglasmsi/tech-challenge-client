@@ -18,32 +18,35 @@ import org.springframework.web.bind.annotation.RequestBody;
 @Tag(name = "Cliente", description = "Cliente")
 public interface ClienteControllerSwagger {
 
-    @Operation(
-            summary = "All Clientes",
-            description = "Returns a list of clientes"
-    )
-    @ApiResponses({
-            @ApiResponse(responseCode = "200", content = {@Content(schema = @Schema(implementation = Cliente.class),
-                    mediaType = "application/json")}),
-            @ApiResponse(responseCode = "404", content = {@Content(schema = @Schema())})})
-    ResponseEntity<Object> getAllClientes();
+  @Operation(
+      summary = "All Clientes",
+      description = "Returns a list of clientes"
+  )
+  @ApiResponses({
+      @ApiResponse(responseCode = "200", content = {
+          @Content(schema = @Schema(implementation = Cliente.class),
+              mediaType = "application/json")}),
+      @ApiResponse(responseCode = "404", content = {@Content(schema = @Schema())})})
+  ResponseEntity<Object> getAllClientes();
 
-    @Operation(
-            summary = "Cliente by CPF",
-            description = "Returns a cliente by CPF")
-    @ApiResponses({
-            @ApiResponse(responseCode = "200", content = {@Content(schema = @Schema(implementation = Cliente.class),
-                    mediaType = "application/json")}),
-            @ApiResponse(responseCode = "404", content = {@Content(schema = @Schema())})})
-    ResponseEntity<Object> getClienteByCpf(@PathVariable(value = "cpf") String cpf);
+  @Operation(
+      summary = "Cliente by CPF",
+      description = "Returns a cliente by CPF")
+  @ApiResponses({
+      @ApiResponse(responseCode = "200", content = {
+          @Content(schema = @Schema(implementation = Cliente.class),
+              mediaType = "application/json")}),
+      @ApiResponse(responseCode = "404", content = {@Content(schema = @Schema())})})
+  ResponseEntity<Object> getClienteByCpf(@PathVariable(value = "cpf") String cpf);
 
-    @Operation(
-            summary = "Create Cliente",
-            description = "Create a cliente")
-    @ApiResponses({
-            @ApiResponse(responseCode = "201", content = {@Content(schema = @Schema(implementation = Cliente.class),
-                    mediaType = "application/json")}),
-            @ApiResponse(responseCode = "400", content = {@Content(schema = @Schema())})})
-    ResponseEntity<Object> createCliente(@RequestBody Cliente cliente);
+  @Operation(
+      summary = "Create Cliente",
+      description = "Create a cliente")
+  @ApiResponses({
+      @ApiResponse(responseCode = "201", content = {
+          @Content(schema = @Schema(implementation = Cliente.class),
+              mediaType = "application/json")}),
+      @ApiResponse(responseCode = "400", content = {@Content(schema = @Schema())})})
+  ResponseEntity<Object> createCliente(@RequestBody Cliente cliente);
 
 }

@@ -1,6 +1,7 @@
 package br.com.fiap.postech.fastfood.client.controller.dto;
 
 public class ErrorResponse {
+
   private String message;
 
   public ErrorResponse(final String message) {

@@ -15,21 +15,18 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackageClasses = TechChallengeClienteApplication.class)
 public class BeanConfig {
 
-    @Bean
-    public ModelMapper modelMapper() {
-        return new ModelMapper();
-    }
+  @Bean
+  public ModelMapper modelMapper() {
+    return new ModelMapper();
+  }
 
-    @Bean
-    public CriarClienteUseCase criarClienteUseCase(ClientePersistencePort persistence) {
-        return new CriarClienteUseCaseImpl(persistence);
-    }
+  @Bean
+  public CriarClienteUseCase criarClienteUseCase(ClientePersistencePort persistence) {
+    return new CriarClienteUseCaseImpl(persistence);
+  }
 
-    @Bean
-    public BuscarClienteUseCase buscarClienteUseCase(ClientePersistencePort persistence) {
-        return new BuscarClienteUseCaseImpl(persistence);
-    }
-
-
-
+  @Bean
+  public BuscarClienteUseCase buscarClienteUseCase(ClientePersistencePort persistence) {
+    return new BuscarClienteUseCaseImpl(persistence);
+  }
 }

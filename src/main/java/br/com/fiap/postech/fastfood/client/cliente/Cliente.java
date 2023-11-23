@@ -1,7 +1,10 @@
 package br.com.fiap.postech.fastfood.client.cliente;
 
-import lombok.*;
-
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -10,10 +13,10 @@ import lombok.*;
 @Builder
 public class Cliente {
 
-    private String cpf;
-    private String nome;
-    private String telefone;
-    private String endereco;
-    private String email;
+  private String cpf;
+  private String nome;
+  private String telefone;
+  private String endereco;
+  private String email;
 
 }

@@ -1,16 +1,14 @@
 package br.com.fiap.postech.fastfood.client.cliente.impl;
 
-
-
 import br.com.fiap.postech.fastfood.client.cliente.BuscarClienteUseCase;
 import br.com.fiap.postech.fastfood.client.cliente.Cliente;
 import br.com.fiap.postech.fastfood.client.cliente.ClientePersistencePort;
-import lombok.RequiredArgsConstructor;
-
 import java.util.List;
+import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class BuscarClienteUseCaseImpl implements BuscarClienteUseCase {
+
   private final ClientePersistencePort clientePersistencePort;
 
   @Override
