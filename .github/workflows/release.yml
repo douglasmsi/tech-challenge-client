@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: tech-challenge
+  ECR_REPOSITORY: tech-challenge-client
   EKS_CLUSTER: tech-challenge-eks
   RELEASE_REVISION: "pr-${{ github.event.pull_request.number }}-${{ github.event.pull_request.head.sha }}"
   KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
