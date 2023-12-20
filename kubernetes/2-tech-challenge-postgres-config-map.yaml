@@ -4,7 +4,7 @@ metadata:
   name: postgres-config-map
   namespace: tech-challenge-namespace
 data:
-  postgres-server: "tech-challenge.caxagz6v59r4.us-east-1.rds.amazonaws.com"
+  postgres-server: "tech-challenge-client.caxagz6v59r4.us-east-1.rds.amazonaws.com"
   postgres-database-name: "techchallengedbclient"
   postgres-user-username: "techchallengeuser"
   postgres-user-password: "techchallengepassword"
