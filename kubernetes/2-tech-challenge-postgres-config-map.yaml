@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: postgres-order-config-map
+  name: postgres-client-config-map
   namespace: tech-challenge-namespace
 data:
   postgres-client-server: "tech-challenge-client.caxagz6v59r4.us-east-1.rds.amazonaws.com"
