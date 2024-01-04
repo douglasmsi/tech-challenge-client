@@ -55,7 +55,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tech-challenge-client-alb
+  name: tech-challenge-client
   namespace: tech-challenge-namespace
 spec:
   selector:
