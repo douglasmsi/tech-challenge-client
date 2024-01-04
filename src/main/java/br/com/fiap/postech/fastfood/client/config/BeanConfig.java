@@ -1,6 +1,6 @@
 package br.com.fiap.postech.fastfood.client.config;
 
-import br.com.fiap.postech.fastfood.client.TechChallengeClienteApplication;
+import br.com.fiap.postech.fastfood.client.TechChallengeClientApplication;
 import br.com.fiap.postech.fastfood.client.cliente.BuscarClienteUseCase;
 import br.com.fiap.postech.fastfood.client.cliente.ClientePersistencePort;
 import br.com.fiap.postech.fastfood.client.cliente.CriarClienteUseCase;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackageClasses = TechChallengeClienteApplication.class)
+@ComponentScan(basePackageClasses = TechChallengeClientApplication.class)
 public class BeanConfig {
 
   @Bean

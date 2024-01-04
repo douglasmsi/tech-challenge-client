@@ -2,12 +2,14 @@ package br.com.fiap.postech.fastfood.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-public class TechChallengeClienteApplication {
+@EnableFeignClients
+public class TechChallengeClientApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(TechChallengeClienteApplication.class, args);
+    SpringApplication.run(TechChallengeClientApplication.class, args);
   }
 
 }

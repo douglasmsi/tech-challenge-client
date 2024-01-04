@@ -28,33 +28,33 @@ spec:
             - name: DB_SERVER
               valueFrom:
                 configMapKeyRef:
-                  name: postgres-config-map
-                  key: postgres-server
+                  name: postgres-client-config-map
+                  key: postgres-client-server
             - name: DB_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: postgres-config-map
-                  key: postgres-port
+                  name: postgres-client-config-map
+                  key: postgres-client-port
             - name: DB_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: postgres-config-map
-                  key: postgres-database-name
+                  name: postgres-client-config-map
+                  key: postgres-client-database-name
             - name: DB_USERNAME
               valueFrom:
                 configMapKeyRef:
-                  name: postgres-config-map
-                  key: postgres-user-username
+                  name: postgres-client-config-map
+                  key: postgres-client-user-username
             - name: DB_PASSWORD
               valueFrom:
                 configMapKeyRef:
-                  name: postgres-config-map
-                  key: postgres-user-password
+                  name: postgres-client-config-map
+                  key: postgres-client-user-password
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: tech-challenge-alb
+  name: tech-challenge-client-alb
   namespace: tech-challenge-namespace
 spec:
   selector:
