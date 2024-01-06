@@ -21,6 +21,11 @@ rules:
     resources:
       - pods
       - nodes
+      - nodes/stats
+      - namespaces
+      - configmaps
+      - services
+      - endpoints
     verbs:
       - get
       - list
@@ -41,10 +46,27 @@ rules:
       - nodes/stats
       - namespaces
       - configmaps
+      - services
+      - endpoints
     verbs:
       - get
       - list
       - watch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  labels:
+    k8s-app: metrics-server
+  name: extension-apiserver-authentication-reader
+  namespace: tech-challenge-namespace
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - services
+    verbs:
+      - list
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
