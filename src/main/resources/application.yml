@@ -30,5 +30,12 @@ spring:
 
 
   cloud:
+    kubernetes:
+      reload:
+        enabled: true
+      discovery:
+        all-namespaces: false
+        namespaces:
+          - tech-challenge-namespace
     compatibility-verifier:
       enabled: false
