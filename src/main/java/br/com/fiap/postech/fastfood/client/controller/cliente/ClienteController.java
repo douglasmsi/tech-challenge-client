@@ -8,8 +8,6 @@ import br.com.fiap.postech.fastfood.client.controller.dto.ErrorResponse;
 import br.com.fiap.postech.fastfood.client.enums.ErrorMessages;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -25,9 +23,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("clientes")
 @CrossOrigin(origins = "*", maxAge = 3600)
 public class ClienteController implements ClienteControllerSwagger {
-
-  @Autowired
-  private DiscoveryClient discoveryClient;
 
   private final CriarClienteUseCase criarClienteUseCase;
   private final BuscarClienteUseCase buscarClienteUseCase;
